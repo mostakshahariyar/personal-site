@@ -347,6 +347,9 @@ header .navbar ul li a:hover{
     height: 15rem;
     resize: none;
 }
+.contact .row .content .email{
+    text-transform: lowercase;
+}
 
 .contact .row .content .title{
     text-transform: uppercase;
