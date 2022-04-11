@@ -242,6 +242,10 @@
             <input type="text" placeholder="phone" class="box" id="contact-phone" onkeyup="validatePhone()">
             <span id="phone-error"></span>
         </div>
+         <div class="contact-error">
+            <input type="text" placeholder="subject" class="box" id="contact-subject" onkeyup="validateSubject()">
+            <span id="subject-error"></span>
+        </div>
 
         <div class="contact-error">
             <textarea cols="30" rows="10" class="box message" placeholder="message" id="contact-message" onkeyup="validateMessage()"></textarea>
@@ -251,8 +255,7 @@
         
 
         <div class="contact-error">
-            <button type="submit" class="btn" onclick="return validataForm()"> send <i class="fas fa-paper-plane"></i> </button> <br>
-        <span id="submit-error"></span>
+            <button class="btn" id="btn"> send <i class="fas fa-paper-plane"></i> </button>
         </div>
 
     </form>
@@ -292,6 +295,10 @@
 
 <!-- custom js file link  -->
 <script src="script.js"></script>
+
+<!-- auto email sent  -->
+<script src="https://smtpjs.com/v3/smtp.js">
+</script>
 
 
 </body>

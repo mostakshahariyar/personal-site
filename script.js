@@ -56,7 +56,8 @@ const nameError = document.getElementById('name-error');
 const emailError = document.getElementById('email-error');
 const phoneError = document.getElementById('phone-error');
 const messageError = document.getElementById('message-error');
-const submitError = document.getElementById('submit-error');
+const subjectError = document.getElementById('subject-error');
+
 
 
 
@@ -127,14 +128,48 @@ function validateMessage(){
   messageError.innerHTML = '<i class="fa fa-check-circle" aria-hidden="true"></i>';
   return true;
 }
-
-function validateForm(){
-  if(!validateName() || !validateEmail() || !validatePhone() || !validateMessage()){
-    submitError.style.display = 'block';
-    submitError.innerHTML = 'please fix error to send';
-    setTimeout(() => {
-      submitError.style.display = 'none';
-    }, 3000);
+function validateSubject(){
+  const subject = document.getElementById('contact-subject').value;
+  const required = 10;
+  const left = required - subject.length;
+  // console.log(left);
+  if(left>0){
+    subjectError.innerHTML = left + 'more charectars required';
     return false;
   }
+  subjectError.innerHTML = '<i class="fa fa-check-circle" aria-hidden="true"></i>';
+  return true;
 }
+
+
+/*###################################
+         sent message im my gmail
+#######################################*/
+
+const btn =document.getElementById('btn');
+btn.addEventListener('click', function(e){
+  e.preventDefault()
+  const message = document.getElementById('contact-message').value;
+
+  const subject = document.getElementById('contact-subject').value;
+
+  const email = document.getElementById('contact-email').value;
+
+  const phone = document.getElementById('contact-phone').value;
+  
+  const name = document.getElementById('contact-name').value;
+
+  const body = ` name:  ${name} <br/>email:${email} <br/> phone: ${phone} <br/> message ${message}`
+
+  Email.send({
+    Host : "smtp.gmail.com",
+    Username : "mostakshahariyar18@gmail.com",
+    Password : "obvnbtrabgdohlnv",
+    To : 'mostakshahariyar18@gmail.com',
+    From : email,
+    Subject : subject,
+    Body : body
+}).then(
+  message => alert(message)
+);
+})
