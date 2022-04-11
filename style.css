@@ -65,7 +65,6 @@ section{
 .btn:hover{
     background:var(--yellow);
 }
-
 .heading{
     text-align: center;
     margin:0 6rem;
@@ -163,6 +162,13 @@ header .navbar ul li a:hover{
 .home h1{
     font-size:5rem;
     color:#fff;
+}
+.home h2{
+    color: #fff;
+    font-size: 3.5rem;
+}
+.home .auto-type{
+    color: var(--yellow);
 }
 
 .home h1 span{
@@ -370,6 +376,19 @@ header .navbar ul li a:hover{
     display: none;
 }
 
+/* contact error css */
+form div span{
+    color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+form div span i{
+    color: seagreen;
+}
+.contact-error{
+    display: flex;
+}
 
 
 

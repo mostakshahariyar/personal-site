@@ -14,6 +14,9 @@
     <!-- custom css file link  -->
     <link rel="stylesheet" href="style.css">
 
+    <!-- font-awesome -->
+    <script src="https://kit.fontawesome.com/44c48dbaca.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
     
@@ -49,8 +52,7 @@
 
     <h3>HI THERE !</h3>
     <h1>I'M <span>mostak shahariyar</span></h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio deserunt aspernatur fugiat minus enim ullam repudiandae sint sed magnam tenetur! Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, at.
-    </p>
+    <h2>I'M <span class="auto-type"></span></h2>
     <a href="#about"><button class="btn">about me <i class="fas fa-user"></i></button></a>
 
 </section>
@@ -68,7 +70,7 @@
     <div class="info">
         <h3> <span> name : </span> mostak shahariyar </h3>
         <h3> <span> age : </span> 20 </h3>
-        <h3> <span> qualification : </span> LLB </h3>
+        <h3> <span> qualification : </span> CSE </h3>
         <h3> <span> post : </span> front end developer </h3>
         <h3> <span> language : </span> bangla, english </h3>
         <a href='./cv.pdf' download><button class="btn"> download CV <i class="fas fa-download"></i> </button></a>
@@ -114,45 +116,50 @@
 
     <div class="box">
         <i class="fas fa-graduation-cap"></i>
-        <span>2016</span>
-        <h3>front end development</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quos alias praesentium. Id autem provident laborum quae, distinctio eaque temporibus!</p>
-    </div>
-
-    <div class="box">
-        <i class="fas fa-graduation-cap"></i>
         <span>2017</span>
-        <h3>front end development</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quos alias praesentium. Id autem provident laborum quae, distinctio eaque temporibus!</p>
+        <h3>Microsoft Word</h3>
+        <p>Institute Name 	: 	Udemy</p>
     </div>
 
     <div class="box">
         <i class="fas fa-graduation-cap"></i>
         <span>2018</span>
-        <h3>front end development</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quos alias praesentium. Id autem provident laborum quae, distinctio eaque temporibus!</p>
+        <h3>Microsoft PowerPoint</h3>
+        <p>Institute Name 	: 	Udemy</p>
     </div>
 
     <div class="box">
         <i class="fas fa-graduation-cap"></i>
         <span>2019</span>
-        <h3>front end development</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quos alias praesentium. Id autem provident laborum quae, distinctio eaque temporibus!</p>
+        <h3>Secondary School Certificate (SSC)</h3>
+        <p>Group	: 	Science</p>
+        <p>School	: 	Sujapur Model Govt High School </p>
+        <p>Board	: 	Dinajpur</p>
     </div>
 
     <div class="box">
         <i class="fas fa-graduation-cap"></i>
         <span>2020</span>
         <h3>front end development</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quos alias praesentium. Id autem provident laborum quae, distinctio eaque temporibus!</p>
+        <p>Institute Name 	: 	Programming Hero</p>
+        <p>Student ID	: 	WEB4-0960</p>
     </div>
 
     <div class="box">
         <i class="fas fa-graduation-cap"></i>
         <span>2021</span>
-        <h3>front end development</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quos alias praesentium. Id autem provident laborum quae, distinctio eaque temporibus!</p>
+        <h3>Higher Secondary Certificate (HSC)</h3>
+        <p>Group	: 	Science</p>
+        <p>Collage	: 	Shahid Smriti Adarsha Collage</p>
+        <p>Board	: 	Dinajpur</p>
     </div>
+    <div class="box">
+        <i class="fas fa-graduation-cap"></i>
+        <span>2022</span>
+        <h3>Computer Science and Engineering(CSE)</h3>
+        <p>Upcoming all deatiels</p>
+    </div>
+
 
 </div>
 
@@ -221,11 +228,32 @@
 
     <form action="">
 
-        <input type="text" placeholder="name" class="box">
-        <input type="email" placeholder="email" class="box">
-        <input type="text" placeholder="project" class="box">
-        <textarea name="" id="" cols="30" rows="10" class="box message" placeholder="message"></textarea>
-        <button type="submit" class="btn"> send <i class="fas fa-paper-plane"></i> </button>
+        <div class="contact-error">
+            <input type="text" placeholder="Full Name" class="box" id="contact-name" onkeyup="validateName()">
+            <span id="name-error"></span>
+            
+        </div>
+
+        <div class="contact-error">
+            <input type="email" placeholder="email" class="box" id="contact-email" onkeyup="validateEmail()">
+            <span id="email-error"></span>
+         </div>
+         <div class="contact-error">
+            <input type="text" placeholder="phone" class="box" id="contact-phone" onkeyup="validatePhone()">
+            <span id="phone-error"></span>
+        </div>
+
+        <div class="contact-error">
+            <textarea cols="30" rows="10" class="box message" placeholder="message" id="contact-message" onkeyup="validateMessage()"></textarea>
+            <span id="message-error"></span>
+            <br>
+        </div>
+        
+
+        <div class="contact-error">
+            <button type="submit" class="btn" onclick="return validataForm()"> send <i class="fas fa-paper-plane"></i> </button> <br>
+        <span id="submit-error"></span>
+        </div>
 
     </form>
 
@@ -258,6 +286,9 @@
 
 <!-- jquery cdn link  -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- type script js  -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
 <!-- custom js file link  -->
 <script src="script.js"></script>
