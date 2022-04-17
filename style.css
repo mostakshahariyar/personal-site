@@ -463,6 +463,7 @@ form div span i{
   }
 
   .footer .footer-link a{
+      text-decoration: none;
       color: #fff;
       margin: 15px;
   }
@@ -472,7 +473,7 @@ form div span i{
       border-radius: 10px;
   }
 
-  .copyright p{
+  .copy-right p{
     color: var(--yellow);
     text-transform: lowercase;
     font-size: 3rem;
