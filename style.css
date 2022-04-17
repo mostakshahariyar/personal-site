@@ -448,7 +448,35 @@ form div span i{
   }
 
 
+  /* footer style  */
+  .footer{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: -300px;
+      flex-direction: column;
+  }
+  .footer .footer-link{
+      font-size: 5rem;
+      color: #fff;
+      margin-bottom: 3rem;
+  }
 
+  .footer .footer-link a{
+      color: #fff;
+      margin: 15px;
+  }
+  .footer .footer-link a:hover{
+      background: #fff;
+      color: var(--yellow);
+      border-radius: 10px;
+  }
+
+  .copyright p{
+    color: var(--yellow);
+    text-transform: lowercase;
+    font-size: 3rem;
+  }
 
 
 
@@ -528,6 +556,11 @@ form div span i{
 
     .contact .row form{
         margin:3rem 0;
+    }
+    .footer .footer-link{
+        display: flex;
+        flex-direction: column;
+        margin-top: 300px;
     }
 
  }
