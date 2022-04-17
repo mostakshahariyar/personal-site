@@ -18,6 +18,7 @@ $(document).ready(function(){
 
   });
 
+
   // smooth scrolling 
 
   $('a[href*="#"]').on('click',function(e){
@@ -173,3 +174,16 @@ btn.addEventListener('click', function(e){
   message => alert(message)
 );
 })
+
+
+// theme toggler
+
+document.querySelector('.switcher-btn').onclick = () =>{
+  document.querySelector('.color-switcher').classList.toggle('active');
+}
+
+let themeColor = document.querySelectorAll('.color-switcher span');
+themeColor.forEach(color => color.addEventListener('click', () =>{
+  let background = color.style.background;
+  document.querySelector('body').style.background = background;
+}))

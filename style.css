@@ -84,7 +84,7 @@ header{
     z-index: 1000;
     height:100%;
     width:35rem;
-    background:#1a1a1a;
+    background:#051937;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -220,6 +220,7 @@ header .navbar ul li a:hover{
     text-align: center;
     padding: 2rem;
     margin:2rem;
+    border-radius: 3rem;
 }
 
 .about .row .counter .box span{
@@ -393,10 +394,58 @@ form div span i{
     display: flex;
 }
 
+/*################################
+         theme togger
+################################## */
 
 
+.color-switcher{
+    position: fixed;
+    top: 25px; right: -200px;
+    width: 200px;
+    border-radius: 30px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.263);
+    z-index: 1000;
+  }
+  .color-switcher.active{
+    right: -140px;
+  }
+  
+  .color-switcher .switcher-btn{
+    position: absolute;
+    top: 0; left: -30px;
+    font-size: 20px;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.263);
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+  }
+  
+  .color-switcher .switcher-btn i{
+    animation: rotate 2s linear infinite;
+  }
+  @keyframes rotate {
+    100%{
+      transform: rotate(360deg);
+    }
+  }
+  .color-switcher .theme-buttons-container{
+    display: flex;
+    flex-direction: column;
+    margin-right: -200px;
+  }
 
-
+  
+  .color-switcher .theme-buttons-container span{
+    display: flex;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin: 5px;
+    cursor: pointer;
+  }
 
 
 
@@ -436,6 +485,9 @@ form div span i{
 
    header.toggle{
     left:0%;
+   }
+   .color-switcher{
+       top: 65px;
    }
 
    body{
